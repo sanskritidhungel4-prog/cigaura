@@ -6,8 +6,8 @@ export default function About() {
       <div className="max-w-7xl mx-auto grid md:grid-cols-2 gap-16 items-center">
         <div className="relative h-[600px] rounded-none overflow-hidden border border-primary/5">
           <Image
-            src="https://images.unsplash.com/photo-1590490360182-c33d57733427?auto=format&fit=crop&q=80&w=1200"
-            alt="Modern Room Interior"
+            src="/images/room-interior.png"
+            alt="Himalayan Sanctuary View"
             fill
             className="object-cover"
           />
@@ -15,18 +15,18 @@ export default function About() {
         
         <div className="space-y-8">
           <div className="space-y-4">
-            <h2 className="text-sm uppercase tracking-[0.3em] text-accent font-semibold">About Us</h2>
-            <h3 className="text-4xl md:text-5xl font-bold leading-tight">
-              A Serene Lakeside Retreat in Indrasarowar
+            <h2 className="text-xs uppercase tracking-[0.4em] text-accent font-bold">About C.I.G Aura</h2>
+            <h3 className="text-5xl font-bold leading-tight text-primary">
+              A Lakeside Sanctuary <br /> for the Soul
             </h3>
           </div>
           
-          <p className="text-lg text-secondary leading-relaxed font-light">
-            Surrounded by natural beauty, tranquil waters, and fresh mountain air, our hotel offers the perfect escape for guests seeking relaxation, comfort, and a connection with nature.
+          <p className="text-base text-secondary leading-relaxed font-light">
+            Discover the essence of tranquility at C.I.G Aura, a refined lakeside sanctuary nestled within the majestic landscape of Indrasarowar. Under the stewardship of Chandragiri Investment Group, we balance contemporary luxury with the raw beauty of Nepal's highlands.
           </p>
           
-          <p className="text-lg text-secondary leading-relaxed font-light">
-            Hotel C.I.G Aura operates under the esteemed Chandragiri Investment Group Limited (C.I.G), reflecting a strong commitment to quality, hospitality, and excellence. With thoughtfully designed rooms, scenic views, and warm, personalized service, we strive to create memorable experiences for every guest.
+          <p className="text-base text-secondary leading-relaxed font-light">
+            Our spaces are crafted with a minimalist touch, ensuring every moment is infused with authentic Himalayan charm and genuine connection with nature.
           </p>
 
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-4">
@@ -41,17 +41,6 @@ export default function About() {
                 <span className="text-sm font-medium text-secondary uppercase tracking-wider">{item}</span>
               </div>
             ))}
-          </div>
-          
-          <div className="grid grid-cols-2 gap-8 pt-6">
-            <div>
-              <h4 className="text-3xl font-bold text-primary">Indrasarowar</h4>
-              <p className="text-sm text-accent uppercase tracking-widest mt-1">Location</p>
-            </div>
-            <div>
-              <h4 className="text-3xl font-bold text-primary">+977 9802344086</h4>
-              <p className="text-sm text-accent uppercase tracking-widest mt-1">Contact</p>
-            </div>
           </div>
         </div>
       </div>
