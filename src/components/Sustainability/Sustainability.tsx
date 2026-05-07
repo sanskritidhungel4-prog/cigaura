@@ -15,8 +15,8 @@ const sustainabilityItems = [
     image: "/images/sustainability/waste.png",
   },
   {
-    title: "Cleaning Drives",
-    description: "We organize regular community cleanups to keep our vineyard and surroundings pristine.",
+    title: "Lake Conservation",
+    description: "We organize regular cleaning drives to preserve the purity of Indrasarowar and protect its surrounding watershed.",
     image: "/images/sustainability/cleaning.png",
   },
   {
@@ -25,9 +25,9 @@ const sustainabilityItems = [
     image: "/images/sustainability/staffing.png",
   },
   {
-    title: "Agro Tourism",
-    description: "Experience vineyard life with guided tours, winemaking insights, and farm-to-table tastings.",
-    image: "/images/sustainability/agro.png",
+    title: "Local Fisheries",
+    description: "We partner with Indrasarowar's local fishing community to promote sustainable practices and support traditional livelihoods.",
+    image: "/images/sustainability/fishery.png",
   },
 ];
 

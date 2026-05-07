@@ -45,7 +45,7 @@ export default function Navbar() {
             />
           </Link>
           
-          <div className="hidden md:flex space-x-12 text-[10px] font-bold uppercase tracking-[0.3em]">
+          <div className={`hidden md:flex space-x-12 text-[10px] font-bold uppercase tracking-[0.3em] transition-colors duration-500 ${scrolled ? 'text-primary' : 'text-white'}`}>
             <Link href="#about" className="hover:text-accent transition-colors">About</Link>
             <Link href="#rooms" className="hover:text-accent transition-colors">Rooms</Link>
             <Link href="#experiences" className="hover:text-accent transition-colors">Experiences</Link>
@@ -60,7 +60,7 @@ export default function Navbar() {
             
             <button 
               onClick={() => setIsMenuOpen(!isMenuOpen)}
-              className="md:hidden text-primary p-2"
+              className={`md:hidden p-2 transition-colors duration-500 ${scrolled ? 'text-primary' : 'text-white'}`}
               aria-label="Toggle menu"
             >
               <div className="w-6 h-4 relative flex flex-col justify-between">

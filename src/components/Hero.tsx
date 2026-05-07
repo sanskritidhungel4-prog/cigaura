@@ -11,18 +11,18 @@ export default function Hero() {
           className="object-cover"
           priority
         />
-        <div className="absolute inset-0 bg-black/30" />
+        <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-black/20 to-black/60" />
       </div>
       
-      <div className="relative z-10 text-center text-white px-6 max-w-5xl">
-        <h1 className="text-5xl sm:text-6xl md:text-8xl font-bold mb-8 leading-[1.1] tracking-tight animate-reveal">
+      <div className="relative z-10 text-center text-white px-6 max-w-5xl drop-shadow-2xl">
+        <h1 className="text-5xl sm:text-6xl md:text-8xl font-bold mb-8 leading-[1.1] tracking-tight animate-reveal drop-shadow-lg">
           Experience <br /> Lakeside Tranquility
         </h1>
-        <p className="text-lg md:text-xl max-w-xl mx-auto opacity-80 font-medium mb-12 tracking-wide animate-reveal [animation-delay:200ms]">
+        <p className="text-lg md:text-xl max-w-xl mx-auto text-white font-medium mb-12 tracking-wide animate-reveal [animation-delay:200ms] drop-shadow-md">
           A modern retreat in the heart of Indrasarowar.
         </p>
         <div className="pt-8 animate-reveal [animation-delay:400ms]">
-          <span className="text-xs uppercase tracking-[0.4em] opacity-50 border-t border-white/20 pt-8 inline-block">
+          <span className="text-xs uppercase tracking-[0.4em] text-white/80 border-t border-white/40 pt-8 inline-block font-bold">
             Project in Progress
           </span>
         </div>
