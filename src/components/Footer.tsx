@@ -11,7 +11,7 @@ export default function Footer() {
                 src="/images/hotal_logo.png" 
                 alt="C.I.G Aura Logo" 
                 fill 
-                className="object-contain brightness-0 invert" 
+                className="object-contain" 
               />
             </div>
             <p className="text-white/60 font-light italic leading-relaxed">
