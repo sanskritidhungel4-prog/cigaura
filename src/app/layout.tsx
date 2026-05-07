@@ -15,6 +15,9 @@ const urbanist = Urbanist({
 export const metadata: Metadata = {
   title: "Hotel C.I.G Aura | Lakeside Retreat in Indrasarowar, Nepal",
   description: "Experience tranquility at Hotel C.I.G Aura, a serene lakeside retreat in Indrasarowar, Nepal. Modern comfort meets natural beauty.",
+  icons: {
+    icon: "/C.I.G.png",
+  },
 };
 
 export default function RootLayout({

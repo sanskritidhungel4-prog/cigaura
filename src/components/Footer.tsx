@@ -1,10 +1,19 @@
+import Image from "next/image";
+
 export default function Footer() {
   return (
     <footer id="contact" className="bg-primary text-white pt-24 pb-12 px-6">
       <div className="max-w-7xl mx-auto">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-16 mb-24">
           <div className="space-y-8">
-            <h2 className="text-3xl font-bold tracking-tighter">C.I.G AURA</h2>
+            <div className="relative w-40 h-16">
+              <Image 
+                src="/images/hotal_logo.png" 
+                alt="C.I.G Aura Logo" 
+                fill 
+                className="object-contain brightness-0 invert" 
+              />
+            </div>
             <p className="text-white/60 font-light italic leading-relaxed">
               "A sanctuary where contemporary luxury meets the raw beauty of Nepal's highlands."
             </p>
@@ -16,6 +25,7 @@ export default function Footer() {
               <li><a href="#" className="hover:text-white transition-colors">Home</a></li>
               <li><a href="#about" className="hover:text-white transition-colors">About Us</a></li>
               <li><a href="#rooms" className="hover:text-white transition-colors">Accommodations</a></li>
+              <li><a href="#experiences" className="hover:text-white transition-colors">Experiences</a></li>
               <li><a href="#sustainability" className="hover:text-white transition-colors">Commitment</a></li>
             </ul>
           </div>
@@ -49,10 +59,6 @@ export default function Footer() {
         <div className="pt-12 border-t border-white/10 flex flex-col md:flex-row justify-between items-center gap-6">
           <div className="text-white/30 text-[10px] uppercase tracking-[0.2em] font-medium">
             © {new Date().getFullYear()} Hotel C.I.G Aura. All rights reserved.
-          </div>
-          <div className="flex space-x-8 text-white/30 text-[10px] uppercase tracking-[0.2em] font-medium">
-            <a href="#" className="hover:text-white transition-colors">Privacy Policy</a>
-            <a href="#" className="hover:text-white transition-colors">Terms of Service</a>
           </div>
         </div>
       </div>

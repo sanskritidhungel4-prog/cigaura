@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
 import { useState, useEffect } from "react";
 
 export default function Navbar() {
@@ -34,13 +35,20 @@ export default function Navbar() {
         }`}
       >
         <div className="max-w-7xl mx-auto px-6 flex justify-between items-center">
-          <Link href="/" className="text-xl font-bold tracking-[0.2em] text-primary">
-            C.I.G <span className="text-accent font-light italic">AURA</span>
+          <Link href="/" className="relative w-32 h-12 md:w-40 md:h-16">
+            <Image 
+              src="/images/hotal_logo.png" 
+              alt="C.I.G Aura Logo" 
+              fill 
+              className="object-contain"
+              priority
+            />
           </Link>
           
           <div className="hidden md:flex space-x-12 text-[10px] font-bold uppercase tracking-[0.3em]">
             <Link href="#about" className="hover:text-accent transition-colors">About</Link>
             <Link href="#rooms" className="hover:text-accent transition-colors">Rooms</Link>
+            <Link href="#experiences" className="hover:text-accent transition-colors">Experiences</Link>
             <Link href="#sustainability" className="hover:text-accent transition-colors">Commitment</Link>
             <Link href="#contact" className="hover:text-accent transition-colors">Contact</Link>
           </div>
@@ -86,6 +94,13 @@ export default function Navbar() {
               className="text-4xl font-bold tracking-tighter hover:text-accent transition-colors uppercase"
             >
               Rooms
+            </Link>
+            <Link 
+              href="#experiences" 
+              onClick={() => setIsMenuOpen(false)}
+              className="text-4xl font-bold tracking-tighter hover:text-accent transition-colors uppercase"
+            >
+              Experiences
             </Link>
             <Link 
               href="#sustainability" 

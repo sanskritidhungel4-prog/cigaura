@@ -6,8 +6,8 @@ export default function About() {
       <div className="max-w-7xl mx-auto grid md:grid-cols-2 gap-16 items-center">
         <div className="relative h-[600px] rounded-none overflow-hidden border border-primary/5">
           <Image
-            src="/images/room-interior.png"
-            alt="Himalayan Sanctuary View"
+            src="/images/NEPL9160.jpg"
+            alt="C.I.G Aura Sanctuary"
             fill
             className="object-cover"
           />
