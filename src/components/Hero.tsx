@@ -5,8 +5,8 @@ export default function Hero() {
     <section className="relative h-screen flex items-center justify-center overflow-hidden">
       <div className="absolute inset-0 z-0">
         <Image
-          src="/images/hero_aura.png"
-          alt="Refined Himalayan Luxury"
+          src="/images/hero_aura_final.png"
+          alt="Hotel C.I.G AURA"
           fill
           className="object-cover"
           priority
