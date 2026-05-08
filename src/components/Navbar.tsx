@@ -64,9 +64,9 @@ export default function Navbar() {
               aria-label="Toggle menu"
             >
               <div className="w-6 h-4 relative flex flex-col justify-between">
-                <span className={`w-full h-0.5 bg-current transition-all duration-300 ${isMenuOpen ? 'rotate-45 translate-y-1.5' : ''}`} />
-                <span className={`w-full h-0.5 bg-current transition-all duration-300 ${isMenuOpen ? 'opacity-0' : ''}`} />
-                <span className={`w-full h-0.5 bg-current transition-all duration-300 ${isMenuOpen ? '-rotate-45 -translate-y-2' : ''}`} />
+                <span className={`w-full h-0.5 transition-all duration-300 ${isMenuOpen ? 'bg-primary rotate-45 translate-y-1.5' : 'bg-current'}`} />
+                <span className={`w-full h-0.5 transition-all duration-300 ${isMenuOpen ? 'bg-primary opacity-0' : 'bg-current'}`} />
+                <span className={`w-full h-0.5 transition-all duration-300 ${isMenuOpen ? 'bg-primary -rotate-45 -translate-y-2' : 'bg-current'}`} />
               </div>
             </button>
           </div>
