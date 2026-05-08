@@ -23,7 +23,7 @@ export default function Hero() {
         </p>
         <div className="pt-8 animate-reveal [animation-delay:400ms]">
           <span className="text-xs uppercase tracking-[0.4em] text-white/80 border-t border-white/40 pt-8 inline-block font-bold">
-            Project in Progress
+            Restaurant Open — Remaining Project Under Construction
           </span>
         </div>
       </div>

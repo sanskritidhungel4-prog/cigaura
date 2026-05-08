@@ -57,8 +57,10 @@ export default function Footer() {
         </div>
         
         <div className="pt-12 border-t border-white/10 flex flex-col md:flex-row justify-between items-center gap-6">
-          <div className="text-white/30 text-[10px] uppercase tracking-[0.2em] font-medium">
-            © {new Date().getFullYear()} Hotel C.I.G Aura. All rights reserved.
+          <div className="text-white/30 text-[10px] uppercase tracking-[0.2em] font-medium flex flex-col md:flex-row items-center gap-2 md:gap-4">
+            <span>© {new Date().getFullYear()} Hotel C.I.G Aura. All rights reserved.</span>
+            <span className="w-1 h-1 bg-accent/30 rounded-full hidden md:block" />
+            <span className="text-accent/60 italic">Restaurant Open — Remaining Project Under Construction</span>
           </div>
         </div>
       </div>
