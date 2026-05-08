@@ -1,11 +1,27 @@
+"use client";
 import Navbar from "@/components/Navbar";
 import Hero from "@/components/Hero";
 import About from "@/components/About";
 import Sustainability from "@/components/Sustainability/Sustainability";
 import Footer from "@/components/Footer";
 import Image from "next/image";
+import { useRef, useState } from "react";
 
 export default function Home() {
+  const videoRef = useRef<HTMLVideoElement>(null);
+  const [isPlaying, setIsPlaying] = useState(true);
+
+  const togglePlay = () => {
+    if (videoRef.current) {
+      if (isPlaying) {
+        videoRef.current.pause();
+      } else {
+        videoRef.current.play();
+      }
+      setIsPlaying(!isPlaying);
+    }
+  };
+
   return (
     <main className="min-h-screen">
       <Navbar />
@@ -25,29 +41,29 @@ export default function Home() {
                 title: "Deluxe Lakeside", 
                 desc: "Experience the calming presence of Indrasarowar from your private sanctuary. These rooms blend local craftsmanship with comfort, offering stunning sunrise views over the water.",
                 amenities: ["Lake View", "King Bed", "Private Balcony"],
-                image: "/images/room.jpg"
+                image: "/images/rooms/room1.jpeg"
               },
               { 
                 title: "Executive Suite", 
                 desc: "A refined space featuring handcrafted furniture and panoramic windows. The Executive Suite offers a peaceful atmosphere with premium finishes that reflect the highland landscape.",
                 amenities: ["Extended Lounge", "Tea & Coffee", "Modern Ensuite"],
-                image: "/images/room2.jpg"
+                image: "/images/rooms/room2.jpeg"
               },
               { 
                 title: "Premium Villa", 
                 desc: "Our most secluded retreat, offering direct visual connection to the lake. This standalone-style accommodation provides complete tranquility with authentic Nepali design touches.",
                 amenities: ["Water's Edge", "Private Balcony", "Premium Bedding"],
-                image: "/images/room_suite.jpg"
+                image: "/images/rooms/room4.jpeg"
               },
               { 
                 title: "Standard Comfort", 
                 desc: "A warm and inviting space for the modern traveler. These rooms provide essential comforts with a focus on genuine hospitality and a restful mountain atmosphere.",
                 amenities: ["Hillside View", "High-speed Wi-Fi", "Cozy Interior"],
-                image: "/images/room4.jpg"
+                image: "/images/rooms/room3.jpeg"
               }
             ].map((room, i) => (
               <div key={i} className="space-y-12">
-                <div className="w-full aspect-[4/3] md:aspect-[21/9] relative overflow-hidden bg-accent/5">
+                <div className="w-full aspect-[4/3] md:aspect-[16/8] relative overflow-hidden bg-accent/5">
                   <Image
                     src={room.image}
                     alt={room.title}
@@ -74,6 +90,63 @@ export default function Home() {
                 </div>
               </div>
             ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Virtual Tour Section - Optimized for Vertical Video & Responsiveness */}
+      <section className="py-20 md:py-32 bg-primary overflow-hidden min-h-[90vh] flex items-center">
+        <div className="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-20 items-center">
+          <div className="space-y-6 md:space-y-10 order-2 md:order-1 text-center md:text-left">
+            <div className="space-y-4 md:space-y-6">
+              <h2 className="text-[10px] md:text-xs uppercase tracking-[0.4em] text-accent font-bold">Virtual Experience</h2>
+              <h3 className="text-4xl md:text-7xl font-bold text-white tracking-tighter leading-tight md:leading-[1.1]">
+                A Glimpse into <br /> Your Retreat
+              </h3>
+            </div>
+            <p className="text-base md:text-xl text-white/60 font-light leading-relaxed max-w-lg mx-auto md:mx-0">
+              Take a vertical journey through our meticulously curated spaces. This immersive tour captures the raw textures, natural light, and the serene "aura" that defines the C.I.G experience.
+            </p>
+          </div>
+          
+          <div className="relative order-1 md:order-2 flex justify-center md:justify-end w-full h-[60vh] md:h-[80vh]">
+            <div 
+              className="relative h-full aspect-[9/16] rounded-[2rem] md:rounded-[3rem] overflow-hidden border-[8px] md:border-[14px] border-white/5 shadow-[0_30px_60px_-12px_rgba(0,0,0,0.5)] ring-1 ring-white/10 cursor-pointer group"
+              onClick={togglePlay}
+            >
+              <video 
+                ref={videoRef}
+                autoPlay 
+                loop 
+                muted 
+                playsInline
+                className="w-full h-full object-cover"
+              >
+                <source src="/videos/room_tour.mp4" type="video/mp4" />
+              </video>
+              
+              {/* Subtle Play/Pause Button in Corner */}
+              <div className="absolute bottom-6 right-6 z-20">
+                <div className="w-10 h-10 rounded-full bg-black/40 backdrop-blur-md border border-white/10 flex items-center justify-center hover:bg-black/60 transition-colors">
+                  {isPlaying ? (
+                    <svg className="w-4 h-4 text-white" fill="currentColor" viewBox="0 0 24 24">
+                      <rect x="6" y="4" width="4" height="16" />
+                      <rect x="14" y="4" width="4" height="16" />
+                    </svg>
+                  ) : (
+                    <svg className="w-4 h-4 text-white ml-0.5" fill="currentColor" viewBox="0 0 24 24">
+                      <path d="M8 5v14l11-7z" />
+                    </svg>
+                  )}
+                </div>
+              </div>
+            </div>
+            
+            {/* Background Glow */}
+            <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full h-full -z-10">
+              <div className="absolute -top-10 md:-top-20 -right-10 md:-right-20 w-48 md:w-80 h-48 md:h-80 bg-accent/15 rounded-full blur-[60px] md:blur-[100px]" />
+              <div className="absolute -bottom-10 md:-bottom-20 -left-10 md:-left-20 w-56 md:w-96 h-56 md:h-96 bg-white/5 rounded-full blur-[80px] md:blur-[120px]" />
+            </div>
           </div>
         </div>
       </section>

@@ -73,11 +73,11 @@ export default function Sustainability() {
           </p>
         </div>
 
-        <div ref={containerRef} className="flex flex-col md:flex-row h-[700px] md:h-[600px] gap-2">
+        <div ref={containerRef} className="flex flex-col md:flex-row h-auto md:h-[600px] gap-4 md:gap-2">
           {sustainabilityItems.map((item, index) => (
             <div
               key={index}
-              className="sustainability-item group relative overflow-hidden flex-1 transition-all duration-700 ease-[cubic-bezier(0.23,1,0.32,1)] hover:flex-[2.5] opacity-0 cursor-pointer"
+              className="sustainability-item group relative overflow-hidden h-[300px] md:h-full md:flex-1 transition-all duration-700 ease-[cubic-bezier(0.23,1,0.32,1)] md:hover:flex-[2.5] opacity-0 cursor-pointer"
               style={{ transitionDelay: `${index * 100}ms` }}
             >
               <Image
@@ -86,25 +86,25 @@ export default function Sustainability() {
                 fill
                 className="object-cover transition-transform duration-1000 group-hover:scale-105 grayscale-[0.2] group-hover:grayscale-0"
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-primary via-primary/20 to-transparent opacity-60 group-hover:opacity-80 transition-opacity duration-500" />
+              <div className="absolute inset-0 bg-gradient-to-t from-primary/90 via-primary/20 to-transparent opacity-70 md:opacity-60 group-hover:opacity-90 transition-opacity duration-500" />
               
-              <div className="absolute inset-0 p-10 flex flex-col justify-end transform transition-all duration-700">
-                <div className="space-y-4">
-                  <span className="text-[10px] uppercase tracking-[0.3em] text-accent font-bold opacity-0 group-hover:opacity-100 transition-opacity duration-700 delay-100">
+              <div className="absolute inset-0 p-8 md:p-10 flex flex-col justify-end transform transition-all duration-700">
+                <div className="space-y-3 md:space-y-4">
+                  <span className="text-[9px] md:text-[10px] uppercase tracking-[0.3em] text-accent font-bold opacity-100 md:opacity-0 group-hover:opacity-100 transition-opacity duration-700 delay-100">
                     Impact 0{index + 1}
                   </span>
-                  <h4 className="text-2xl md:text-3xl font-bold text-white tracking-tight leading-tight transform group-hover:translate-y-0 transition-transform duration-700">
+                  <h4 className="text-xl md:text-3xl font-bold text-white tracking-tight leading-tight transform translate-y-0 md:group-hover:translate-y-0 transition-transform duration-700">
                     {item.title}
                   </h4>
                   <div className="h-[1px] w-8 bg-accent/50 group-hover:w-16 transition-all duration-700" />
-                  <p className="text-white/0 group-hover:text-white/70 transition-all duration-700 text-sm font-light leading-relaxed max-h-0 group-hover:max-h-32 overflow-hidden">
+                  <p className="text-white/80 md:text-white/0 group-hover:text-white/70 transition-all duration-700 text-xs md:text-sm font-light leading-relaxed max-h-[100px] md:max-h-0 group-hover:max-h-32 overflow-hidden">
                     {item.description}
                   </p>
                 </div>
               </div>
 
               {/* Number indicator background */}
-              <div className="absolute -bottom-4 -right-4 text-white/5 text-9xl font-bold font-heading select-none group-hover:text-white/10 transition-colors duration-700">
+              <div className="absolute -bottom-4 -right-4 text-white/5 text-8xl md:text-9xl font-bold font-heading select-none group-hover:text-white/10 transition-colors duration-700">
                 {index + 1}
               </div>
             </div>
