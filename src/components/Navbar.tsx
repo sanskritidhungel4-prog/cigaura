@@ -49,6 +49,7 @@ export default function Navbar() {
             <Link href="#about" className="hover:text-accent transition-colors">About</Link>
             <Link href="#rooms" className="hover:text-accent transition-colors">Rooms</Link>
             <Link href="#experiences" className="hover:text-accent transition-colors">Experiences</Link>
+            <Link href="#restaurant" className="hover:text-accent transition-colors">Dining</Link>
             <Link href="#sustainability" className="hover:text-accent transition-colors">Commitment</Link>
             <Link href="#contact" className="hover:text-accent transition-colors">Contact</Link>
           </div>
@@ -101,6 +102,13 @@ export default function Navbar() {
               className="text-4xl font-bold tracking-tighter hover:text-accent transition-colors uppercase"
             >
               Experiences
+            </Link>
+            <Link 
+              href="#restaurant" 
+              onClick={() => setIsMenuOpen(false)}
+              className="text-4xl font-bold tracking-tighter hover:text-accent transition-colors uppercase"
+            >
+              Dining
             </Link>
             <Link 
               href="#sustainability" 

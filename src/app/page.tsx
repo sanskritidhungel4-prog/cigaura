@@ -2,6 +2,7 @@
 import Navbar from "@/components/Navbar";
 import Hero from "@/components/Hero";
 import About from "@/components/About";
+import Restaurant from "@/components/Restaurant";
 import Sustainability from "@/components/Sustainability/Sustainability";
 import Footer from "@/components/Footer";
 import Image from "next/image";
@@ -203,6 +204,8 @@ export default function Home() {
           </div>
         </div>
       </section>
+
+      <Restaurant />
 
       <section className="py-40 bg-[#fafafa]">
         <div className="max-w-7xl mx-auto px-6">
