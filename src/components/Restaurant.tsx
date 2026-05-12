@@ -21,7 +21,7 @@ export default function Restaurant() {
             <div className="relative w-full aspect-[4/3]">
               <Image
                 src="/images/extra/IMG_0082.JPG.jpeg"
-                alt="Welcoming guests at the courtyard entry"
+                alt="Our dedicated team members at the courtyard entry"
                 fill
                 sizes="(max-w-768px) 100vw, 50vw"
                 className="object-cover object-[center_25%] transition-transform duration-700 group-hover:scale-105"
@@ -30,7 +30,7 @@ export default function Restaurant() {
             <div className="p-6 bg-white border-t border-primary/5">
               <h4 className="text-lg font-bold text-primary mb-1">Warm Hospitality</h4>
               <p className="text-xs text-secondary/80 font-light">
-                Welcoming guests by the serene traditional courtyard and reflection pond.
+                Our dedicated team members by the serene traditional courtyard and reflection pond.
               </p>
             </div>
           </div>
